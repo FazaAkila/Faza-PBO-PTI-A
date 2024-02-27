@@ -18,8 +18,8 @@ Fitur yang ditiru :
 1. Daftar Ketersediaan Buku
 2. Peminjaman Buku
 3. Pengembalian Buku 
-4. Kelas
+4. Keluar
 
 ## 🔗 Link Penjelasan Tugas
 
-https://www.youtube.com/watch?v=dQw4w9WgXcQ
+https://youtu.be/9dDk45vXmKQ?si=HW8EVsWaN4e-LpNj

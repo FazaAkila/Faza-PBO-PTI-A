@@ -10,7 +10,9 @@ Tema yang dipilih : Makhluk Hidup
 Class Diagram yang dibuat :
 
 Class Diagram Manusia
+
 Class Diagram Hewan
+
 Class Diagram Tumbuhan
 
 🔗 Link Penjelasan Tugas

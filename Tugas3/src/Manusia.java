@@ -30,7 +30,7 @@ public class Manusia {
         System.out.println("Tinggi Badan : " + tinggiBadan + " Cm");
         System.out.println("Berat Badan : " + beratBadan + " Kg");
         System.out.println("Pekerjaan : " + pekerjaan);
-        System.out.println("Alamat : ");
+        System.out.println("Alamat : " + alamat);
     }
     
     public void perbaruiData(String namaBaru, int umurBaru, String jenisKelaminBaru, double tinggiBadanBaru, double beratBadanBaru, String pekerjaanBaru, String alamatBaru) {

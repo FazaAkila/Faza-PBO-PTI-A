@@ -1,0 +1,107 @@
+Soal Nomor 2 (Overloading Method) :
+Jika pada baris 7, pada parameter double value dan double value2 di hapus dan di ganti 
+menjadi int a dan int b apa yang terjadi? Jelaskan!
+
+Jika pada baris 7 parameter double value dan double value2 dihapus dan diganti menjadi int a dan int b, maka fungsi tersebut akan memiliki dua parameter dengan tipe data int, bukan double seperti sebelumnya. Artinya, fungsi tersebut akan menerima dua argumen bilangan bulat. Jika perubahan ini dilakukan, maka pemanggilan HitungLuas pada baris 18 akan menghasilkan error karena tidak ada metode HitungLuas yang sesuai dengan tipe data parameter double untuk pemanggilan tersebut. Jadi, program tidak akan berhasil dikompilasi dan akan menghasilkan kesalahan saat kompilasi.
+
+Soal Nomor 3 (Overloading Method) :
+Rubah method pada baris ketujuh menjadi method bertipe void, dan lakukan juga 
+perubahan main method.
+import java.util.Scanner;
+
+public class Overloading {
+    public static void HitungLuas(int a, int b) {
+        int nilai = a * b;
+        System.out.println("Maka hasil luas : " + nilai);
+    }
+
+    public static void HitungLuas(double value, double value2) {
+        double nilai = value * value2;
+        System.out.println("Maka hasil luas : " + nilai);
+    }
+
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+
+        System.out.print("Masukkan nilai integer 1 : ");
+        int integer1 = in.nextInt();
+
+        System.out.print("Masukkan nilai integer 2 : ");
+        int integer2 = in.nextInt();
+
+        HitungLuas(integer1, integer2);
+
+        System.out.print("Masukkan nilai double 1 : ");
+        double double1 = in.nextDouble();
+
+        System.out.print("Masukkan nilai double 2 : ");
+        double double2 = in.nextDouble();
+
+        HitungLuas(double1, double2);
+
+        in.close();
+    }
+}
+
+
+Soal Nomor 2 (Overloading Constructor) :
+Pada class lingkaran Tambahkan constructor dengan parameter int tinggi, apa yang terjadi 
+dan jelaskan!
+Jika pada kelas Lingkaran ditambahkan constructor dengan parameter int tinggi, maka kelas tersebut akan memiliki dua konstruktor: satu dengan parameter int alas saja, dan yang lainnya dengan parameter int alas dan int tinggi.
+
+Soal Nomor 3 (Overloading Constructor) :
+Pada class lingkaran tambahkan constrctor dengan tipe data String alas dan String tinggi, 
+kemudian tambahkan method untuk melakukan parsing atau perubahan tipe data dari 
+String menjadi integer. Setelah itu pada method main lakukan instansiasi objek dengan 
+nama objek Lstring dengan memanggil constructor bertipe data String. Jelaskan!
+public class Lingkaran {
+    int alas, tinggi;
+
+    public Lingkaran(int alas) {
+        this.alas = alas;
+    }
+
+    public Lingkaran(int alas, int tinggi) {
+        this.alas = alas;
+        this.tinggi = tinggi;
+    }
+
+    public Lingkaran(String alas, String tinggi) {
+        this.alas = parseToInt(alas);
+        this.tinggi = parseToInt(tinggi);
+    }
+
+    public void setAlas(int alas) {
+        this.alas = alas;
+    }
+
+    public void setTinggi(int tinggi) {
+        this.tinggi = tinggi;
+    }
+
+    public int getAlas() {
+        return alas;
+    }
+
+    public int getTinggi() {
+        return tinggi;
+    }
+
+    public double hitungLuas() {
+        double hasil = (double) (getTinggi() * getAlas()) / 2;
+        return hasil;
+    }
+
+    public void displayMessage() {
+        System.out.println("Hitung Luas : " + hitungLuas());
+    }
+
+    private int parseToInt(String value) {
+        try {
+            return Integer.parseInt(value);
+        } catch (NumberFormatException e) {
+            System.out.println("Error: Input tidak valid, nilai dianggap 0.");
+            return 0;
+        }
+    }
+}

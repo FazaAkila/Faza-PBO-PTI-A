@@ -1,0 +1,2 @@
+Kucing,2,Anggora,darat,Indonesia,5.0
+Anjing ,4,Chihuahua,Darat,Indonesia,4.0

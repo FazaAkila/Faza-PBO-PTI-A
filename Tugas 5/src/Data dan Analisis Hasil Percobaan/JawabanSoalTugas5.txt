@@ -1,0 +1,46 @@
+Data dan Analisis hasil percobaan
+
+A. Encapsulation 1
+
+1. Lakukan percobaan diatas dan benahi jika menemukan kesalahan!
+Kesalahan pada kode program di class Student dan Test adalah pada class test, dimana kode program yang terjadi error adalah sebagai berikut:
+    - s1.setMark("90"); seharusnya s1.setMark(90); Pada angka 90 seharusnya tidak menggunakan tanda petik (")
+    - Kemudian pada System.out.println("s1Name is " + s1.setName()); seharusnya System.out.println("s1Name is "+s1.getName()); yaitu menggunakan getName dan bukan setName
+    - Pada System.out.println("s1Mark is " + s1.setMark()); seharusnya System.out.println("s1Mark is "+ s1.getMark());
+    - System.out.println("name dan mark " + name + " " + mark); seharusnya System.out.println("name dan mark " + s1.getName() + " " + s1.getMark());
+    - Kesalahan System.out.println adalah menggunakan set yang seharusnya menggunakan get
+
+2. Jika pada baris 6 s1.setName diubah menjadi s1.getName apa yang terjadi? jelaskan!
+    Maka ketika diprint, kode program akan menampilkan nama dari objek s1
+3. Setelah diperbaiki, ubahlah hak akses pada baris 4 (pada class Student) menjadi private apa yang terjadi jika class Test dijalankan? Jelaskan!
+    ketika diubah menjadi private, maka nilai pada class Test tidak dapat memasukkam nilai name pada objek s1
+4. Jika kedua kelas diatas terdapat dalam package yang sama apakah konsep enkapsulasi tetap berfungsi? jelaskan!
+    Ketika sudah ditaruh ke dalam package yang sama, maka encapsulasi tetap berpengaruh pada kode program tersebut
+
+B. Encapsulation 2
+
+1. Method apakah yang menjadi accessor (getter) ?
+    Method yang menjadi accessor yaitu method getMaxLoad(), getLoad()
+2. Tambahkan source code berikut dibawah baris ke 6 pada class TestVehicle1.
+    System.out.println("Add load(100kg) : " + (vehicle.load=500));
+    Jalankan program, apakah output dari program tersebut?
+    Kembalikan program seperti semula.
+    Setelah program dijalankan, maka akan terjadi error pada (vehicle.load=500) karena load bersifat private dan pada kode program tersebut merupakan public
+3. Ubahlah tipe data pada atribut load dan maxload pada class Vehicle1 menjadi public.
+    Jalankan program, apakah output dari program tersebut?
+        a. Tambahkan source kode berikut dibawah baris ke 6 pada class TestVehicle1.
+            System.out.println("Add load(100kg) : " + (vehicle.load=500));
+            Jalankan program, apakah output dari program tersebut?
+            Kembalikan program seperti semula.
+            - Ketika kode program dijalankan, maka program akan menampilkan "Add load(100kg) : 500.0"
+        b. Tambahkan source kode berikut dibawah baris ke 12 pada class TestVehicle1.
+            System.out.println("Add load(100kg) : " + (vehicle.load=500));
+            Jalankan program, apakah output dari program tersebut?
+            Kembalikan program seperti semula.
+            - Ketika kode program dijalankan, maka program akan menampilkan "Add load(100kg) : 500.0"
+4. Ulangi instruksi pada nomer 4 dengan mengubah tipe data pada atribut load dan maxload pada class Vehicle1 menjadi protected.
+    a. Ketika kode program dijalankan, maka program akan menampilkan "Add load(100kg) : 500.0"
+    b. Ketika kode program dijalankan, maka program akan menampilkan "Add load(100kg) : 500.0"
+5. Ulangi instruksi pada nomer 4 dengan mengubah tipe data pada atribut load dan maxload pada class Vehicle1 menjadi default.
+    a. Ketika kode program dijalankan, maka program akan menampilkan "Add load(100kg) : 500.0"
+    b. Ketika kode program dijalankan, maka program akan menampilkan "Add load(100kg) : 500.0"

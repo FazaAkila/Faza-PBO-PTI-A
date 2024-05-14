@@ -1,0 +1,24 @@
+1. Jelaskan apa fungsi dari extends dan super pada kode subclass?
+Jawaban :
+Extends dan super digunakan untuk mengatur hubungan dan interaksi antara kelas induk (superclass) dan kelas turunan (subclass). Extends digunakan untuk mendeklarasikan bahwa sebuah kelas adalah turunan dari kelas lain. Ketika sebuah kelas menggunakan extends, itu berarti kelas tersebut mewarisi sifat dan perilaku (atribut dan metode) dari kelas induknya. Dengan kata lain, subclass (kelas turunan) adalah spesialisasi dari superclass (kelas induk). Sedangkan super digunakan dalam konteks subclass untuk merujuk pada objek superclass. Super dapat digunakan untuk memanggil konstruktor dari kelas induk.
+
+2. Untuk apa digunakan keyword this pada constructor, setter dan getter?
+Jawaban :
+Ketika parameter konstruktor memiliki nama yang sama dengan variabel instance (atribut) dari kelas, this digunakan untuk membedakan antara parameter dan variabel instance. this juga dapat digunakan untuk memanggil konstruktor lain dalam kelas yang sama (constructor chaining). Ini membantu mengurangi duplikasi kode dengan memanfaatkan konstruktor yang ada.  Dalam metode setter, this digunakan untuk membedakan antara parameter metode dan variabel instance. Dalam metode getter, this digunakan untuk merujuk pada variabel instance dari objek saat ini. Namun, dalam konteks getter, penggunaan this biasanya bersifat opsional karena tidak ada ambigu dengan nama parameter.
+
+3. Tambahkan dan jalankan kode ini di kelas Main, lalu amati apa yang terjadi?
+HeroAgility hero3 = (HeroAgility) heroUp;
+hero3.display();
+Jawaban :
+Ketika menambahkan dan menjalankan kode tambahan HeroAgility hero3 = (HeroAgility) heroUp;, kode tersebut akan melempar ClassCastException pada runtime karena heroUp tidak dapat dikonversi menjadi HeroAgility.
+
+4. Ubahlah modifier atribut type pada class HeroIntel dan HeroAgility menjadi public, lalu coba akses
+langsung melalui class Main. Apakah atribut bisa diakses langsung atau tidak, jelaskan!
+Jawaban : 
+Dengan mengubah modifier atribut type menjadi public, atribut ini dapat diakses langsung dari luar kelasnya. Ini berarti kita dapat membaca dan menulis nilai atribut type tanpa menggunakan metode akses (getter/setter). Meskipun ini memudahkan akses, biasanya ini tidak direkomendasikan dalam praktik pemrograman yang baik karena melanggar prinsip enkapsulasi. Enkapsulasi adalah salah satu prinsip OOP yang menyarankan untuk menjaga data tetap privat dan hanya dapat diakses melalui metode yang dikontrol.
+
+5. Buatlah class baru HeroMagic dengan atribut tambahan power = “Magic” serta extends semua
+atribut dan method dari class Hero. Kemudian coba buatlah kode untuk upcasting dan downcasting
+dari class HeroMagic ke Hero pada class Main!
+Jawaban :
+Dengan menambahkan kelas HeroMagic yang mewarisi dari Hero, kita dapat melakukan upcasting dan downcasting antara HeroMagic dan Hero dengan sukses. Ini menunjukkan bagaimana pewarisan memungkinkan penggunaan polimorfisme dalam OOP, di mana objek dari subclass dapat diperlakukan sebagai objek dari superclass dan sebaliknya, selama tipe objek diverifikasi dengan benar.
